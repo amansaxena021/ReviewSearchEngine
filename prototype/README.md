@@ -1,2 +1,8 @@
-# prototype
-this is repository for prototype.
+#Backend
+
+## dependencies
+  * node-fetch
+  * express
+  * cheerio
+  * cors
+## Install these packages with npm install package-name
