@@ -1,0 +1,77 @@
+body{
+  background: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  font-family: Lato;
+}
+#results{
+  padding-bottom: 10%;
+}
+.fontcolor{
+  color: black;
+}
+.colxsxs{
+  padding-left: 3%;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 17%;
+}
+input{
+   text-align:center;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+
+nav{
+  background-size: cover;
+  background-position: center;
+  font-family: Lato;
+}
+html{
+  height: 100%;
+}
+#search{
+  font-family: Lato;
+}
+#navmain{
+  padding-left: 10%;
+}
+#aboutright{
+  padding-right: 100%;
+}
+#content{
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+               0px 8px 3px rgba(0, 0, 0, 0.1),
+               0px 18px 23px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-top: 10%;
+}
+h1{
+  font-weight: 700;
+  font-size: 4em;
+
+}
+
+h3{
+  font-size: 1em;
+}
+hr{
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
