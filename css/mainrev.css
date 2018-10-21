@@ -18,6 +18,9 @@ body{
   flex-grow: 1;
   max-width: 17%;
 }
+li{
+  margin-bottom: 10px;
+}
 input{
    text-align:center;
 }
