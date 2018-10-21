@@ -4,15 +4,15 @@ const searchurl = 'https://www.imdb.com/find?s=tt&ttype=ft&ref_=fn_ft&q=';
 const movieurl = 'https://www.imdb.com/title/';
 const riviewurl = 'https://www.imdb.com/title/';
 
-const searchCache = {};
-const movieCache = {};
-const reviewsCache = {};
+//const searchCache = {};
+//const movieCache = {};
+//const reviewsCache = {};
 
 function getReviews(imdbid){
-	if(reviewsCache[imdbid]){
+	/*if(reviewsCache[imdbid]){
 		console.log('Data extracted from Cache', imdbid);
 		return Promise.resolve(reviewsCache[imdbid]);
-	}
+	}*/
 	return fetch(`${riviewurl}${imdbid}/reviews?ref_=tt_ov_rt`)
 		.then(response => response.text())
 		.then(body => {
@@ -36,16 +36,16 @@ function getReviews(imdbid){
 				};
 				reviews.push(review);
 			});
-			reviewsCache[imdbid] = reviews;
+			//reviewsCache[imdbid] = reviews;
 			return reviews;
 		});
 }
 
 function searchMovies(searchTerm) {
-	if(searchCache[searchTerm]){
+	/*if(searchCache[searchTerm]){
 		console.log('Data extracted from Cache', searchTerm);
 		return Promise.resolve(searchCache[searchTerm]);
-	}
+	}*/
 
 	return fetch(`${searchurl}${searchTerm}`)
 		.then(response => response.text())
@@ -66,17 +66,17 @@ function searchMovies(searchTerm) {
 			movies.push(movie);
 		});
 
-		searchCache[searchTerm] = movies;
+		//searchCache[searchTerm] = movies;
 		return movies;
 	});
 }
 
 
 function getMovie(imdbid){
-	if(movieCache[imdbid]){
+	/*if(movieCache[imdbid]){
 		console.log('Data extracted from Cache', imdbid);
 		return Promise.resolve(movieCache[imdbid]);
-	}
+	}*/
 
 	return fetch(`${movieurl}${imdbid}`)
 		.then(response => response.text())
@@ -105,7 +105,7 @@ function getMovie(imdbid){
 				summary,
 				trailer: `https://imdb.com${trailer}`
 			};
-			movieCache[imdbid] = movie;
+			//movieCache[imdbid] = movie;
 			return movie;
 		});
 }
