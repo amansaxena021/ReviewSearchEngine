@@ -31,8 +31,11 @@ function showresults(results){
 		li.appendChild(img);
 		img.src = movie.image;
 		const a = document.createElement('a');
+		const b = document.createElement('b');
+		b.textContent = "  ";
+		li.appendChild(b);
 		a.textContent = movie.title;
-		a.href = '/C:/Users/FLASH/Desktop/prototype/review.html?imdbid=' + movie.imdbid;
+		a.href = '/review.html?imdbid=' + movie.imdbid;
 		li.appendChild(a);
 		resultlist.appendChild(li);
 	});
